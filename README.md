@@ -30,8 +30,9 @@ You will need to do following step to update onboard SPI Flash
 Copy the stoc u-boot.imx from gadget snap to /system-boot/ partition
 then inset to SD slot on Nitroge6X board 
 
-fatload mmc 0:1 0x13000000 u-boot.imx;
-sf probe;
-sf erase 0 0xc2000;
-sf write 0x13000000 0x400 ${filesize};
-reset
+U-Boot > fatload mmc 0:1 0x13000000 u-boot.imx;sf probe;sf erase 0 0xc2000;sf write 0x13000000 0x400 ${filesize}
+
+and update env...
+
+U-Boot > fatload mmc 0:1 0x13000000 nitrogen6x-kernel_x1.snap/dtbs/imx6q-nitrogen6x.dtb;env import 0x13000000;env save;reset
+
