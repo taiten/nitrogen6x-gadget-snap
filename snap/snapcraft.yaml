@@ -43,6 +43,9 @@ parts:
       - findutils
       - xz-utils
       - gcc-arm-linux-gnueabihf:amd64
+      - html2text
+      - bison
+      - flex
 
 slots:
   i2c-0:
