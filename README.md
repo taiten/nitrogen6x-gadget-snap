@@ -35,4 +35,3 @@ U-Boot > sf probe
 U-Boot > sf erase 0 0xc2000
 U-Boot > sf write 0x13000000 0x400 ${filesize}
 U-Boot > reset
-
