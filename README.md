@@ -21,3 +21,18 @@ Just run snapcraft in the top of the srouce tree.
 ```
 snapcraft
 ```
+
+## Update U-boot image in SPI-Flash
+
+Nitrogen6x won't boot bootloader from SDcard or USB
+You will need to do following step to update onboard SPI Flash
+
+Copy the stoc u-boot.imx from gadget snap to /system-boot/ partition
+then inset to SD slot on Nitroge6X board 
+
+U-Boot > fatload mmc 0:1 0x13000000 u-boot.imx
+U-Boot > sf probe
+U-Boot > sf erase 0 0xc2000
+U-Boot > sf write 0x13000000 0x400 ${filesize}
+U-Boot > reset
+
