@@ -1,4 +1,4 @@
-device-tree: imx6dl-nitrogen6x
+device-tree: imx6q-nitrogen6x
 device-tree-origin: kernel
 volumes:
   pocketbeagle:

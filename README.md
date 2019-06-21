@@ -3,7 +3,7 @@
 This repository contains the source for an Ubuntu Core gadget snap
 for the Nitrogen6x. Building it with snapcraft will
 automatically pull, configure, patch and build the git.denx.de/u-boot.git
-upstream source for `nitrogen6q_defconfig` at release `v2018.11` and produce
+upstream source for `nitrogen6q2g_defconfig` at release `v2018.11` and produce
 a bootable gadget snap with the resulting binaries.
 
 ## Gadget Snaps
