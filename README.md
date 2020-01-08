@@ -19,9 +19,8 @@ https://github.com/snapcore/snapd/wiki/Gadget-snap
 Just run snapcraft in the top of the srouce tree.
 
 ```
-snapcraft
+snapcraft --destructive-mode
 ```
-
 ## Update U-boot image in SPI-Flash
 
 Nitrogen6x won't boot bootloader from SDcard or USB
