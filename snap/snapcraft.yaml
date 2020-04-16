@@ -28,9 +28,10 @@ parts:
       mv $(echo $TCHAINVER|sed 's/.tar.xz$//') toolchain
       CROSS_COMPILE=$(pwd)/toolchain/bin/arm-linux-gnueabihf- make nitrogen6q2g_defconfig
       CROSS_COMPILE=$(pwd)/toolchain/bin/arm-linux-gnueabihf- make
-      cp u-boot.imx $SNAPCRAFT_PART_INSTALL/
+      mkdir -p $SNAPCRAFT_PART_INSTALL/boot-assets
+      cp u-boot.imx $SNAPCRAFT_PART_INSTALL/boot-assets
       tools/mkenvimage -r -s 131072 -o $SNAPCRAFT_PART_INSTALL/uboot.env ../../../uboot.env.in
-      cd $SNAPCRAFT_PART_INSTALL/; ln -s uboot.env uboot.conf
+      cd $SNAPCRAFT_PART_INSTALL; ln -s uboot.env uboot.conf
     build-packages:
       - libpython2.7-dev
       - build-essential
